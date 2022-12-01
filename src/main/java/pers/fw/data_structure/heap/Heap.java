@@ -83,7 +83,7 @@ public abstract class Heap<E extends Comparable<E>> {
     }
 
     /**
-     * 添加元素，若使用无参构造器则第一次调用该方法才会初始化对象数组，默认容量{@link DEFAULT_INITIAL_CAPACITY}；
+     * 添加元素，若使用无参构造器则第一次调用该方法才会初始化对象数组，默认容量{@link Heap#DEFAULT_INITIAL_CAPACITY}；
      * 若数组已满，则扩充二倍长度
      *
      * @param e

@@ -37,7 +37,7 @@ public class MaxHeap<E extends Comparable<E>> extends Heap<E> {
     protected void fixDown(int k) {
         int i;
         while ((i = k << 1) <= size && i > 0) {
-            i = i + 1 > size ? i : (((E) elements[i]).compareTo((E) elements[i + 1]) >= 0 ? i : i + 1);
+            i = i == size ? i : (((E) elements[i]).compareTo((E) elements[i + 1]) >= 0 ? i : i + 1);
             if (((E) elements[i]).compareTo((E) elements[k]) > 0) swap(i, k);
             k = i;
         }
